@@ -1,0 +1,135 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.container .header {
+    width: auto;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.logo {
+    height: 90%;
+    width: auto;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.header-items p{
+    width: 45vw;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: teal;
+    font-weight: bold;
+    padding-right: 3vw;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.about:hover, .action:hover, .work:hover, .resources:hover, .support:hover, .contact:hover{
+    text-decoration: underline;
+}
+
+.header::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.content {
+    width: 100vw;
+    height: auto;
+    background-color: #000;
+}
+
+.content-img{
+    background-color: #000;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1)); 
+}
+
+.centered-text {
+    font-size: 90px;
+    color: #fff;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    top: 17%;
+    position: absolute;
+}
+
+.centered-text-2{
+    color: #fff;
+    font-size: 90px;
+    text-align: center;
+    top: 19%;
+    position: absolute;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.7);
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.partnership{
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0) 60%, rgba(255, 255, 255, 0)); 
+
+}
+
+.partnership .partnership-content{
+    font-size: 70px;
+    color: #fff;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+}
+
+.partnership-div{
+    width: 90vw;
+    background-color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column; 
+    justify-items: center; 
+    align-items: center;
+}
+
+.partnership-div img {
+    width: 150px; 
+    height: 150px;
+    object-fit: contain; 
+}

@@ -1,0 +1,83 @@
+.about-container .header {
+    width: auto;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.logo {
+    height: 90%;
+    width: auto;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.header-items {
+    width: 45vw;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: teal;
+    font-weight: bold;
+    padding-right: 3vw;
+    cursor: pointer;
+}
+
+.about:hover, .volunteer:hover, .work:hover, .resources:hover, .support:hover, .contact:hover{
+    text-decoration: underline;
+}
+
+.header::-webkit-scrollbar{
+    display: none;
+}
+
+.about1 {
+    width: 100vw;
+    height: 60vh;
+    background-color: #000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgb(60, 59, 59)); 
+
+}
+
+.about-text {
+    font-size: 90px;
+    color: #fff;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding-top: 21vh;
+}
+
+.about-content{
+    width: 60vw;
+    margin-left: 20vw;
+    /* display: flex; */
+}
+
+.content-tagline{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    
+
+}
+
+
+.text-1{
+    font-size: 29px;
+}
+
+.text-2, .text-3{
+    font-size: 20px;
+}
+
+

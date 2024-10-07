@@ -1,0 +1,79 @@
+.contact-container .header {
+    width: auto;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.logo {
+    height: 90%;
+    width: auto;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.header-items {
+    width: 45vw;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: teal;
+    font-weight: bold;
+    padding-right: 3vw;
+    cursor: pointer;
+}
+
+.about:hover, .volunteer:hover, .work:hover, .resources:hover, .support:hover, .contact:hover{
+    text-decoration: underline;
+}
+
+.header::-webkit-scrollbar{
+    display: none;
+}
+
+.contact1 {
+    width: 100vw;
+    height: 60vh;
+    background-color: #000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgb(60, 59, 59)); 
+
+}
+
+.contact-text {
+    font-size: 90px;
+    color: #fff;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding-top: 21vh;
+}
+
+.contact-content{
+    width: 60vw;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+    margin-left: 20vw;
+
+}
+
+.contact-1{
+    text-align: center;
+    font-size: 29px;
+}
+
+.email a{
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20vw;
+    margin-top: 10vh;
+}
