@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-.about:hover, .volunteer:hover, .work:hover, .resources:hover, .support:hover, .contact:hover{
+.about:hover, .volunteer:hover, .resources:hover, .what:hover, .contact:hover{
     text-decoration: underline;
 }
 

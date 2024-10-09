@@ -5,8 +5,8 @@ import Landingpage from './Landing Page/landingpage';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
 import Resources from './components/resources/resources';
-import Support from './components/support/support';
-import What from './components/action/action';
+import Volunteer from './components/Volunteer/volunteer';
+import What from './components/what/what';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Landingpage/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='/action' element={<What/>}/>
+          <Route path='/what' element={<What/>}/>
           <Route path='/resources' element={<Resources/>}/>
-          <Route path='/support' element={<Support/>}/>
+          <Route path='/volunteer' element={<Volunteer/>}/>
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </Router>

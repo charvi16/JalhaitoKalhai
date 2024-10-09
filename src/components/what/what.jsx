@@ -1,6 +1,7 @@
 import React from 'react';
-import './action.css';
+import './what.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../logo.jpg';
 
 function What() {
 
@@ -8,17 +9,20 @@ function What() {
 
   const handleSelect = (section) => {
     switch (section) {
+      case 'landingpage':
+        navigate('/');
+        break;
       case 'about':
         navigate('/about');
         break;
-      case 'volunteer':
-        navigate('/volunteer');
+      case 'what':
+        navigate('/what');
         break;
       case 'resources':
         navigate('/resources');
         break;
-      case 'support':
-        navigate('/support');
+      case 'volunteer':
+        navigate('/volunteer');
         break;
       case 'contact':
         navigate('/contact');
@@ -32,6 +36,8 @@ function What() {
     <div className="action-container">
       <div className="header">
         <div className="logo">
+        <img src={logo} alt="logo" onClick={() => navigate('/')} />
+
         </div>
         <div className="header-items">
           <p 
@@ -41,8 +47,8 @@ function What() {
             About 
           </p>
           <p 
-            className='volunteer'
-            onClick={() => handleSelect('volunteer')}
+            className='what'
+            onClick={() => handleSelect('what')}
           >
             What we do
           </p>
@@ -53,10 +59,10 @@ function What() {
             Resources
           </p>
           <p 
-            className='support'
-            onClick={() => handleSelect('support')}
+            className='volunteer'
+            onClick={() => handleSelect('volunteer')}
           >
-            Support
+            Volunteer
           </p>
           <p 
             className='contact'
@@ -66,28 +72,28 @@ function What() {
           </p>
         </div>
       </div>
-      {/* <div 
-          className="action1"
+      <div 
+          className="what1"
         >
-           <h1 className="action-text">About Us</h1>
+           <h1 className="what-text">What We Do</h1>
         </div>
 
-      <div className="action-content">
-        <p className='action-text-1'>Our goal is to collaborate with other non-governmental organizations both
+      <div className="what-content">
+        <p className='what-text-1'>Our goal is to collaborate with other non-governmental organizations both
           domestically and internationally in order to utilize their content or exchange
           connections on our website.</p>
-        <p className='action-text-2'>This will make it easier for everyone to read through
+        <p className='what-text-2'>This will make it easier for everyone to read through
           the wealth of material available on our website, especially for students who are
           still learning.
         </p>
-        <p className='action-text-3'>
+        <p className='what-text-3'>
           Several regional and state-level non-governmental organizations have expressed
           interest in collaborating with us on publication sharing, water storage and
           rainwater harvesting system development, online appointment scheduling, and
           school visitation planning. Among these organizations are UthaanNGO in
           Gurgaon, Natural Solutions in Maharashtra, and RainCentre in Tamil.
         </p>
-      </div> */}
+      </div>
 
     </div>
   );

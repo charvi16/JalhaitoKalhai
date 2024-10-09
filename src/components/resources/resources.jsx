@@ -1,12 +1,16 @@
 import React from 'react'
 import './resources.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../logo.jpg';
 
 function Resources() {
   const navigate = useNavigate();
 
   const handleSelect = (section) => {
     switch (section) {
+      case 'landingpage':
+        navigate('/');
+        break;
       case 'about':
         navigate('/about');
         break;
@@ -16,8 +20,8 @@ function Resources() {
       case 'resources':
         navigate('/resources');
         break;
-      case 'support':
-        navigate('/support');
+      case 'what':
+        navigate('/what');
         break;
       case 'contact':
         navigate('/contact');
@@ -30,6 +34,7 @@ function Resources() {
     <div className="resources-container">
       <div className="header">
         <div className="logo">
+        <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
         <div className="header-items">
           <p 
@@ -39,8 +44,8 @@ function Resources() {
             About
           </p>
           <p 
-            className='volunteer'
-            onClick={() => handleSelect('volunteer')}
+            className='what'
+            onClick={() => handleSelect('what')}
           >
             What we do
           </p>
@@ -51,10 +56,10 @@ function Resources() {
             Resources
           </p>
           <p 
-            className='support'
-            onClick={() => handleSelect('support')}
+            className='volunteer'
+            onClick={() => handleSelect('volunteer')}
           >
-            Support
+            Volunteer
           </p>
           <p 
             className='contact'
@@ -73,14 +78,10 @@ function Resources() {
       <div className="resources-content">
         <p>For resources refer to these articles:</p>
         <div className="resources-links">
-          <a href='http://thealternative.in/environment/i-started-to-do-rwh-in-chennai-for-selfish-reasons-
-            sekhar-raghavan/'>http://thealternative.in/environment/i-started-to-do-rwh-in-chennai-for-selfish-reasons-
-            sekhar-raghavan/
+          <a href='https://www.youtube.com/watch?v=nZEP_j3-0Mo'>https://www.youtube.com/watch?v=nZEP_j3-0Mo
           </a>
           <br/>
-          <a href='http://www.rediff.com/business/slide-show/slide-show-1-success-story-of-an-extraordinary-
-            social-entrepreneur/20110308.htm'>http://www.rediff.com/business/slide-show/slide-show-1-success-story-of-an-extraordinary-
-            social-entrepreneur/20110308.htm
+          <a href='http://www.youtube.com/watch?v=cdiMgcY7gHA'>http://www.youtube.com/watch?v=cdiMgcY7gHA
           </a>
           <br/>
           <a href='http://www.blonnet.com/life/2010/11/12/stories/2010111250110400.htm'>http://www.blonnet.com/life/2010/11/12/stories/2010111250110400.htm
