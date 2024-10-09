@@ -47,7 +47,7 @@
 }
 
 .about-text {
-    font-size: 90px;
+    font-size: 10vw;
     color: #fff;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
@@ -91,7 +91,7 @@
     background-color: white;
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 100000;
 }
 
 .dropdown-content p {
@@ -125,13 +125,32 @@
 
 
 @media screen and (max-width: 800px) {
+    .header{
+        overflow-y:hidden;
+    }
     .header-items {
+        display: none;
+        z-index: -1;
+    }
+
+    .header-items p{
         display: none;
     }
 
     .dropdown {
         display: block;
+        z-index: 100;
     }
+
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000; 
+        top: 100%; 
+    } 
 }
 
 

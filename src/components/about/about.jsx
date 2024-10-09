@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './about.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../logo.jpg';
@@ -6,38 +6,24 @@ import logo from '../logo.jpg';
 function About() {
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState(''); 
+  const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState('');
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSelect = (section) => {
     setSelected(section);
-    switch (section) {
-      case 'landingpage':
-        navigate('/');  // Navigate to root path for Landingpage
-        break;
-      case 'about':
-        navigate('/about');
-        break;
-      case 'what':
-        navigate('/what');
-        break;
-      case 'resources':
-        navigate('/resources');
-        break;
-      case 'volunteer':
-        navigate('/volunteer');
-        break;
-      case 'contact':
-        navigate('/contact');
-        break;
-      default:
-        break;
-    }
-    setDropdownOpen(false); // Close dropdown after selection
+    navigate(`/${section === 'landingpage' ? '' : section}`);
+    setDropdownOpen(false);
   };
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+    setDropdownOpen((prev) => !prev);
   };
 
   return (
@@ -46,39 +32,45 @@ function About() {
         <div className="logo">
           <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        <div className="header-items">
 
         <div className="header-items">
           {loading ? (
             <div className="white-text">Loading, please wait...</div>
           ) : (
             <>
-              <p className={`about ${selected === 'about' ? 'active' : ''}`} onClick={() => handleSelect('about')}>About</p>
-              <p className={`what ${selected === 'what' ? 'active' : ''}`} onClick={() => handleSelect('what')}>What we do</p>
-              <p className={`resources ${selected === 'resources' ? 'active' : ''}`} onClick={() => handleSelect('resources')}>Resources</p>
-              <p className={`volunteer ${selected === 'volunteer' ? 'active' : ''}`} onClick={() => handleSelect('volunteer')}>Volunteer</p>
-              <p className={`contact ${selected === 'contact' ? 'active' : ''}`} onClick={() => handleSelect('contact')}>Contact</p>
+              {['about', 'what we do', 'resources', 'volunteer', 'contact'].map((item) => (
+                <p
+                  key={item}
+                  className={`${item} ${selected === item ? 'active' : ''}`}
+                  onClick={() => handleSelect(item)}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </p>
+              ))}
             </>
           )}
         </div>
 
-          <div className="dropdown">
-            <button className="dropdown-toggle" onClick={toggleDropdown}>
-              Menu
-            </button>
-            <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              {loading ? (
-                <div className="white-text">Loading, please wait...</div>
-              ) : (
-                <>
-                  <p onClick={() => handleSelect('about')}>About</p>
-                  <p onClick={() => handleSelect('what')}>What we do</p>
-                  <p onClick={() => handleSelect('resources')}>Resources</p>
-                  <p onClick={() => handleSelect('volunteer')}>Volunteer</p>
-                  <p onClick={() => handleSelect('contact')}>Contact</p>
-                </>
-              )}
-            </div>
+        <div className="dropdown">
+          <button className="dropdown-toggle" onClick={toggleDropdown}>
+            Menu
+          </button>
+          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+            {loading ? (
+              <div className="white-text">Loading, please wait...</div>
+            ) : (
+              <>
+                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+                  <p
+                    key={item}
+                    className={selected === item ? 'active' : ''}
+                    onClick={() => handleSelect(item)}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </p>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -99,8 +91,8 @@ function About() {
           In an effort to support the UN's global sustainability goals, two
           Grade 8 students, Dimple Kumari and Simple Kumari, from KGBV School in Giridih,
           Jharkhand, took the initiative to prepare this project for the National Students Innovative
-          Challenge, a nationwide school challenge/contest run by e-vidyaloka (website:
-          https://www.evidyaloka.org/national-student-innovation-challenge).
+          Challenge, a nationwide school challenge/contest run by e-vidyaloka (website: 
+          <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>).
         </p>
         <p className='text-3'>
           This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later.

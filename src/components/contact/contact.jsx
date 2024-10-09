@@ -71,9 +71,9 @@ function Contact() {
       </div>
 
       <div className="contact1">
-        <div className="contact-text">
+        <h1 className="contact-text">
           Contact Us
-        </div>
+        </h1>
       </div>
       <div className="contact-content">
         <div className="contact-1">

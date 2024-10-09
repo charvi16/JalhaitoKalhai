@@ -71,9 +71,9 @@ function Resources() {
       </div>
 
       <div className="resources1">
-        <div className="resources-text">
+        <h1 className="resources-text">
           Resources
-        </div>
+        </h1>
       </div>
       <div className="resources-content">
         <p>For resources refer to these articles:</p>
