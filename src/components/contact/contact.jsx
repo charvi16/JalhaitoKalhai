@@ -1,34 +1,30 @@
 import React from 'react'
 import './contact.css';
+import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../logo.jpg';
 
 function Contact() {
   const navigate = useNavigate();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [selected, setSelected] = useState('');
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSelect = (section) => {
-    switch (section) {
-      case 'landingpage':
-        navigate('/');  
-        break;
-      case 'about':
-        navigate('/about');
-        break;
-      case 'what':
-        navigate('/what');
-        break;
-      case 'resources':
-        navigate('/resources');
-        break;
-      case 'volunteer':
-        navigate('/volunteer');
-        break;
-      case 'contact':
-        navigate('/contact');
-        break;
-      default:
-        break;
-    }
+    setSelected(section);
+    navigate(`/${section === 'landingpage' ? '' : section}`);
+    setDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
   };
   return (
     <div className="contact-container">
@@ -37,37 +33,46 @@ function Contact() {
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
         <div className="header-items">
-          <p 
-            className='about' 
-            onClick={() => handleSelect('about')}
-          >
-            About
-          </p>
-          <p 
-            className='what'
-            onClick={() => handleSelect('what')}
-          >
-            What we do
-          </p>
-          <p 
-            className='resources'
-            onClick={() => handleSelect('resources')}
-          >
-            Resources
-          </p>
-          <p 
-            className='volunteer'
-            onClick={() => handleSelect('volunteer')}
-          >
-            Volunteer 
-          </p>
-          <p 
-            className='contact'
-            onClick={() => handleSelect('contact')}
-          >
-            Contact
-          </p>
+          {loading ? (
+            <div className="white-text">Loading, please wait...</div>
+          ) : (
+            <>
+              {['about', 'what we do', 'resources', 'volunteer', 'contact'].map((item) => (
+                <p
+                  key={item}
+                  className={`${item} ${selected === item ? 'active' : ''}`}
+                  onClick={() => handleSelect(item)}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </p>
+              ))}
+            </>
+          )}
         </div>
+
+        <div className="dropdown">
+          <button className="dropdown-toggle" onClick={toggleDropdown}>
+            Menu
+          </button>
+          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+            {loading ? (
+              <div className="white-text">Loading, please wait...</div>
+            ) : (
+              <>
+                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+                  <p
+                    key={item}
+                    className={selected === item ? 'active' : ''}
+                    onClick={() => handleSelect(item)}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </p>
+                ))}
+              </>
+            )}
+          </div>
+        </div>
+
       </div>
 
       <div className="contact1">
