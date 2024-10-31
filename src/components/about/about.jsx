@@ -9,13 +9,6 @@ function About() {
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleSelect = (section) => {
     setSelected(section);
     navigate(`/${section === 'landingpage' ? '' : section}`);
@@ -33,7 +26,7 @@ function About() {
           <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
 
-        <div className="header-items">
+        {/* <div className="header-items">
           {loading ? (
             <div className="white-text">Loading, please wait...</div>
           ) : (
@@ -49,7 +42,44 @@ function About() {
               ))}
             </>
           )}
+        </div> */}
+
+<div className="header-options">
+        <div
+          className={`header-item ${selected === 'about' ? 'active' : ''}`}
+          onClick={() => handleSelect('about')}
+        >
+          About
         </div>
+
+        <div
+          className={`header-item ${selected === 'what' ? 'active' : ''}`}
+          onClick={() => handleSelect('what')}
+        >
+          What We Do
+        </div>
+
+        <div
+          className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+          onClick={() => handleSelect('resources')}
+        >
+          Resources
+        </div>
+
+        <div
+          className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+          onClick={() => handleSelect('volunteer')}
+        >
+          Volunteer
+        </div>
+
+        <div
+          className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSelect('contact')}
+        >
+          Contact
+        </div>
+      </div>
 
         <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
@@ -80,7 +110,7 @@ function About() {
       </div>
 
       <div className="about-content">
-        <p className='content-tagline'>Jal hai.</p>
+        <p className='content-tagline'>Jal hai</p>
         <p className='content-tagline'>To kal hai</p>
         <p className='text-1'>
           The purpose of this website is to increase awareness amongst people about the need to

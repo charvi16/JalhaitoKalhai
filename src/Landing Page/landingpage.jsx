@@ -7,19 +7,18 @@ import partner1 from './partner1.png';
 import partner2 from './partner2.png';
 import partner3 from './partner3.jpg';
 import partner4 from './partner4.png';
+import About from '../components/about/about';
+import Contact from '../components/contact/contact';
+import Resources from '../components/resources/resources';
+import Volunteer from '../components/Volunteer/volunteer';
+import What from '../components/what/what';
 
 function Landingpage() {
+
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSelect = (section) => {
     if (!dropdownOpen) {
@@ -36,44 +35,48 @@ function Landingpage() {
   return (
     <div className="container">
       <div className="header">
+      <div className='header-container'>
         <div className="logo">
           <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-
-        <div className="header-items">
-          <p 
-            className='about' 
-            onClick={() => handleSelect('about')}
-          >
-            About 
-          </p>
-          <p 
-            className='what'
-            onClick={() => handleSelect('what')}
-          >
-            What we do
-          </p>
-          <p 
-            className='resources'
-            onClick={() => handleSelect('resources')}
-          >
-            Resources
-          </p>
-          <p 
-            className='volunteer'
-            onClick={() => handleSelect('volunteer')}
-          >
-            Volunteer
-          </p>
-          <p 
-            className='contact'
-            onClick={() => handleSelect('contact')}
-          >
-            Contact 
-          </p>
+        
+      <div className="header-options">
+        <div
+          className={`header-item ${selected === 'about' ? 'active' : ''}`}
+          onClick={() => handleSelect('about')}
+        >
+          About
         </div>
 
-        <div className="dropdown">
+        <div
+          className={`header-item ${selected === 'what' ? 'active' : ''}`}
+          onClick={() => handleSelect('what')}
+        >
+          What We Do
+        </div>
+
+        <div
+          className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+          onClick={() => handleSelect('resources')}
+        >
+          Resources
+        </div>
+
+        <div
+          className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+          onClick={() => handleSelect('volunteer')}
+        >
+          Volunteer
+        </div>
+
+        <div
+          className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSelect('contact')}
+        >
+          Contact
+        </div>
+      </div>
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -94,7 +97,8 @@ function Landingpage() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
+    </div>
       </div>
 
       <div className="content">
@@ -107,14 +111,38 @@ function Landingpage() {
           <div className="partnership-content">In Partnership</div>
           <div className="partnership-content">with</div>
           <div className="partnership-div">
-            <img src={partner2} alt="partner2" />
-            <img src={partner1} alt="partner1" />
-            <img src={partner3} alt="partner3" />
-            <img src={partner4} alt="partner4" />
+          <a href="https://spsjharkhand.org/" target="_blank" rel="noopener noreferrer">
+              <img src={partner2} alt="partner2" />
+          </a>
+          <a href="https://raincentre.net/" target="_blank" rel="noopener noreferrer">
+              <img src={partner1} alt="partner1" />
+          </a>
+          <a href="https://www.naturalsolutions.org.in/" target="_blank" rel="noopener noreferrer">
+              <img src={partner3} alt="partner3" />
+          </a>
+          <a href="https://uthaanngo.org/" target="_blank" rel="noopener noreferrer">
+              <img src={partner4} alt="partner4" />
+          </a>
+
           </div>
         </div>
+        {/* <Home/> */}
+        <div className="content-display"> 
+        {loading ? (
+              <div className='white-text'>Loading please wait...</div>
+            ) : selected === 'about' ? (
+              <About />
+            ) : selected === 'what' ? (
+              <What/>
+            ) : selected === 'resource' ? (
+              <Resources />
+            ) : selected === 'volunteer' ? (
+              <Volunteer />
+            ) : selected === 'contact' ? (
+              <Contact/>) : null}
       </div>
-    </div>
+      </div>
+    // </div>
   );
 }
 

@@ -10,12 +10,6 @@ function Volunteer() {
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSelect = (section) => {
     setSelected(section);
@@ -35,23 +29,42 @@ function Volunteer() {
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
 
         </div>
-        <div className="header-items">
-          {loading ? (
-            <div className="white-text">Loading, please wait...</div>
-          ) : (
-            <>
-              {['about', 'what we do', 'resources', 'volunteer', 'contact'].map((item) => (
-                <p
-                  key={item}
-                  className={`${item} ${selected === item ? 'active' : ''}`}
-                  onClick={() => handleSelect(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </p>
-              ))}
-            </>
-          )}
+        <div className="header-options">
+        <div
+          className={`header-item ${selected === 'about' ? 'active' : ''}`}
+          onClick={() => handleSelect('about')}
+        >
+          About
         </div>
+
+        <div
+          className={`header-item ${selected === 'what' ? 'active' : ''}`}
+          onClick={() => handleSelect('what')}
+        >
+          What We Do
+        </div>
+
+        <div
+          className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+          onClick={() => handleSelect('resources')}
+        >
+          Resources
+        </div>
+
+        <div
+          className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+          onClick={() => handleSelect('volunteer')}
+        >
+          Volunteer
+        </div>
+
+        <div
+          className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSelect('contact')}
+        >
+          Contact
+        </div>
+      </div>
 
         <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>

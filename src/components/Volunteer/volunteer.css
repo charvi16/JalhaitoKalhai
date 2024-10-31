@@ -1,4 +1,4 @@
-.support-container .header {
+.volunteer-container .header {
     width: auto;
     height: 15vh;
     display: flex;
@@ -19,7 +19,7 @@
     width: auto;
 }
 
-.header-items {
+.header-options {
     width: 45vw;
     display: flex;
     justify-content: space-between;

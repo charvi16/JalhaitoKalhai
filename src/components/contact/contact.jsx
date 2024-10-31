@@ -32,12 +32,12 @@ function Contact() {
         <div className="logo">
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        <div className="header-items">
+        {/* <div className="header-items">
           {loading ? (
             <div className="white-text">Loading, please wait...</div>
           ) : (
             <>
-              {['about', 'what we do', 'resources', 'volunteer', 'contact'].map((item) => (
+              {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
                 <p
                   key={item}
                   className={`${item} ${selected === item ? 'active' : ''}`}
@@ -48,7 +48,43 @@ function Contact() {
               ))}
             </>
           )}
+        </div> */}
+        <div className="header-options">
+        <div
+          className={`header-item ${selected === 'about' ? 'active' : ''}`}
+          onClick={() => handleSelect('about')}
+        >
+          About
         </div>
+
+        <div
+          className={`header-item ${selected === 'what' ? 'active' : ''}`}
+          onClick={() => handleSelect('what')}
+        >
+          What We Do
+        </div>
+
+        <div
+          className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+          onClick={() => handleSelect('resources')}
+        >
+          Resources
+        </div>
+
+        <div
+          className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+          onClick={() => handleSelect('volunteer')}
+        >
+          Volunteer
+        </div>
+
+        <div
+          className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSelect('contact')}
+        >
+          Contact
+        </div>
+      </div>
 
         <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>

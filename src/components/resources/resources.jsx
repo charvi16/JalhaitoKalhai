@@ -10,13 +10,6 @@ function Resources() {
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleSelect = (section) => {
     setSelected(section);
     navigate(`/${section === 'landingpage' ? '' : section}`);
@@ -32,7 +25,7 @@ function Resources() {
         <div className="logo">
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        <div className="header-items">
+        {/* <div className="header-items">
           {loading ? (
             <div className="white-text">Loading, please wait...</div>
           ) : (
@@ -48,9 +41,45 @@ function Resources() {
               ))}
             </>
           )}
+        </div> */}
+        <div className="header-options">
+        <div
+          className={`header-item ${selected === 'about' ? 'active' : ''}`}
+          onClick={() => handleSelect('about')}
+        >
+          About
         </div>
 
-        <div className="dropdown">
+        <div
+          className={`header-item ${selected === 'what' ? 'active' : ''}`}
+          onClick={() => handleSelect('what')}
+        >
+          What We Do
+        </div>
+
+        <div
+          className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+          onClick={() => handleSelect('resources')}
+        >
+          Resources
+        </div>
+
+        <div
+          className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+          onClick={() => handleSelect('volunteer')}
+        >
+          Volunteer
+        </div>
+
+        <div
+          className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSelect('contact')}
+        >
+          Contact
+        </div>
+      </div>
+
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -71,7 +100,7 @@ function Resources() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 
