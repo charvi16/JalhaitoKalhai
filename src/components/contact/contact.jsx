@@ -10,13 +10,6 @@ function Contact() {
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleSelect = (section) => {
     setSelected(section);
     navigate(`/${section === 'landingpage' ? '' : section}`);
@@ -32,23 +25,6 @@ function Contact() {
         <div className="logo">
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        {/* <div className="header-items">
-          {loading ? (
-            <div className="white-text">Loading, please wait...</div>
-          ) : (
-            <>
-              {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                <p
-                  key={item}
-                  className={`${item} ${selected === item ? 'active' : ''}`}
-                  onClick={() => handleSelect(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </p>
-              ))}
-            </>
-          )}
-        </div> */}
         <div className="header-options">
         <div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}

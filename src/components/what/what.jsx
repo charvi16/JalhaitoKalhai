@@ -20,6 +20,7 @@ function What() {
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
+    console.log("Dropdown open:", !dropdownOpen);
   };
 
   
@@ -30,25 +31,8 @@ function What() {
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
 
         </div>
-        {/* <div className="header-items">
-          {loading ? (
-            <div className="white-text">Loading, please wait...</div>
-          ) : (
-            <>
-              {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                <p
-                  key={item}
-                  className={`${item} ${selected === item ? 'active' : ''}`}
-                  onClick={() => handleSelect(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </p>
-              ))}
-            </>
-          )}
-        </div> */}
 
-<div className="header-options">
+      <div className="header-options">
         <div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
@@ -85,28 +69,48 @@ function What() {
         </div>
       </div>
 
-        <div className="dropdown">
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
-          </div>
-        </div>
+      <div className="dropdown">
+  <button className="dropdown-toggle" onClick={toggleDropdown}>
+    Menu
+  </button>
+  <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+    <div
+      className={`header-item ${selected === 'about' ? 'active' : ''}`}
+      onClick={() => handleSelect('about')}
+    >
+      About
+    </div>
+
+    <div
+      className={`header-item ${selected === 'what' ? 'active' : ''}`}
+      onClick={() => handleSelect('what')}
+    >
+      What We Do
+    </div>
+
+    <div
+      className={`header-item ${selected === 'resources' ? 'active' : ''}`}
+      onClick={() => handleSelect('resources')}
+    >
+      Resources
+    </div>
+
+    <div
+      className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
+      onClick={() => handleSelect('volunteer')}
+    >
+      Volunteer
+    </div>
+
+    <div
+      className={`header-item ${selected === 'contact' ? 'active' : ''}`}
+      onClick={() => handleSelect('contact')}
+    >
+      Contact
+    </div>
+  </div>
+</div>
+
       </div>
       <div 
           className="what1"

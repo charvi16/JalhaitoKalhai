@@ -96,7 +96,7 @@
     background-color: #ddd;
 }
 
-.show {
+.dropdown-content .show {
     display: block;
 }
 
@@ -118,12 +118,12 @@
     .header{
         overflow-y:hidden;
     }
-    .header-items {
+    .header-options {
         display: none;
         z-index: -1;
     }
 
-    .header-items p{
+    .header-options p{
         display: none;
     }
 

@@ -25,23 +25,6 @@ function Resources() {
         <div className="logo">
         <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        {/* <div className="header-items">
-          {loading ? (
-            <div className="white-text">Loading, please wait...</div>
-          ) : (
-            <>
-              {['about', 'what we do', 'resources', 'volunteer', 'contact'].map((item) => (
-                <p
-                  key={item}
-                  className={`${item} ${selected === item ? 'active' : ''}`}
-                  onClick={() => handleSelect(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </p>
-              ))}
-            </>
-          )}
-        </div> */}
         <div className="header-options">
         <div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
@@ -79,7 +62,7 @@ function Resources() {
         </div>
       </div>
 
-        {/* <div className="dropdown">
+        <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -100,7 +83,7 @@ function Resources() {
               </>
             )}
           </div>
-        </div> */}
+        </div>
 
       </div>
 

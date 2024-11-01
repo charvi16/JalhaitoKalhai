@@ -76,7 +76,7 @@ function Landingpage() {
           Contact
         </div>
       </div>
-        {/* <div className="dropdown">
+        <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -97,7 +97,7 @@ function Landingpage() {
               </>
             )}
           </div>
-        </div> */}
+        </div>
     </div>
       </div>
 
