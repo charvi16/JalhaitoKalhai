@@ -31,83 +31,57 @@ function About() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          About
-        </div>
+          बारे में
+         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          What We Do
+          हम क्या करते हैं
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          Resources
+          संसाधन
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          Volunteer
+          स्वयंसेवक
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          Contact
+          संपर्क
         </div>
       </div>
 
-        <div className="dropdown">
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
-          </div>
-        </div>
+        {/*  */}
       </div>
 
       <div className="about1">
-        <h1 className="about-text">About Us</h1>
+        <h1 className="about-text">हमारे बारे में</h1>
       </div>
 
       <div className="about-content">
         <p className='content-tagline'>Jal hai</p>
         <p className='content-tagline'>To kal hai</p>
         <p className='text-1'>
-          The purpose of this website is to increase awareness amongst people about the need to
-          reduce water wastage, which is one of the sustainability challenges related to the
-          current water crisis.
+        इस वेबसाइट का उद्देश्य पानी की बर्बादी को कम करने की आवश्यकता के बारे में लोगों के बीच जागरूकता बढ़ाना है, जो वर्तमान जल संकट से संबंधित स्थिरता चुनौतियों में से एक है।
         </p>
         <p className='text-2'>
-          In an effort to support the UN's global sustainability goals, two
-          Grade 8 students, Dimple Kumari and Simple Kumari, from KGBV School in Giridih,
-          Jharkhand, took the initiative to prepare this project for the National Students Innovative
-          Challenge, a nationwide school challenge/contest run by e-vidyaloka (website: 
+        संयुक्त राष्ट्र के वैश्विक स्थिरता लक्ष्यों का समर्थन करने के प्रयास में, झारखंड के गिरिडीह में केजीबीवी स्कूल की आठवीं कक्षा की दो छात्राओं, भारती कुमारी और सिम्पल कुमारी ने, एक राष्ट्रव्यापी स्कूल चुनौती/प्रतियोगिता, नेशनल स्टूडेंट्स इनोवेटिव चैलेंज के लिए इस परियोजना को तैयार करने की पहल की। ई-विद्यालोक  (website: 
           <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>).
         </p>
         <p className='text-3'>
-          This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later.
+        यह परियोजना हमें जल संसाधनों का प्रभावी ढंग से और कुशलतापूर्वक उपयोग करने के विभिन्न तरीकों के बारे में ज्ञान साझा करके बड़े पैमाने पर समुदाय की सेवा करने में मदद करेगी, इनमें से एक है वर्षा जल संचयन या छोटे जल भंडारण बनाना जहां हम बाद में उपयोग करने के लिए बहुमूल्य वर्षा जल को संग्रहीत कर सकते हैं।
         </p>
       </div>
     </div>

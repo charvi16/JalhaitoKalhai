@@ -34,39 +34,39 @@ function Volunteer() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          About
+          बारे में
         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          What We Do
+          हम क्या करते हैं
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          Resources
+          संसाधन
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          Volunteer
+          स्वयंसेवक
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          Contact
+          संपर्क
         </div>
       </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -87,28 +87,28 @@ function Volunteer() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 
       <div 
           className="volunteer1"
         >
-           <h1 className="volunteer-text">Volunteer</h1>
+           <h1 className="volunteer-text">स्वयंसेवक</h1>
         </div>
 
       <div className="volunteer-content">
-        <p className='volunteer-text-1'>THIS IS How You Can Participate.</p>
-        <p className='volunteer-text-2'>We appreciate your interest in volunteering for us.
+        <p className='volunteer-text-1'>इस तरह आप भाग ले सकते हैं।</p>
+        <p className='volunteer-text-2'>हम हमारे लिए स्वयंसेवा में आपकी रुचि की सराहना करते हैं।
         </p>
         <p className='volunteer-text-3'>
-        You can assist in a number of ways, such as by assisting us in addressing online questions 
-        on the water problem that we have received. You can also assist us by putting in place tiny 
-        water storage or rainfall harvesting devices in our neighborhood or by making minor 
-        contributions to the timely replacement of broken taps. We invite you to participate with us 
-        in sharing your insightful publications or essays, as well as your creative and clever 
-        solutions to the ongoing water crisis. Our goal is to keep up this momentum beyond this 
-        school-level competition, as a continuing effort event. 
+        आप कई तरीकों से सहायता कर सकते हैं, जैसे ऑनलाइन प्रश्नों के समाधान में हमारी सहायता करना 
+        पानी की समस्या पर जो हमें प्राप्त हुआ है। आप छोटे स्थान लगाकर भी हमारी सहायता कर सकते हैं 
+        हमारे पड़ोस में जल भंडारण या वर्षा संचयन उपकरण या मामूली निर्माण करके 
+        टूटे हुए नलों को समय पर बदलने में योगदान। हम आपको हमारे साथ भाग लेने के लिए आमंत्रित करते हैं 
+        अपने ज्ञानवर्धक प्रकाशनों या निबंधों के साथ-साथ अपनी रचनात्मक और चतुराई को साझा करने में 
+        चल रहे जल संकट का समाधान. हमारा लक्ष्य इस गति को इससे आगे भी बरकरार रखना है 
+        एक सतत प्रयास कार्यक्रम के रूप में स्कूल-स्तरीय प्रतियोगिता।
         </p>
       </div>
 

@@ -30,39 +30,39 @@ function Resources() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          About
+          बारे में
         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          What We Do
+          हम क्या करते हैं
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          Resources
+          संसाधन
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          Volunteer
+          स्वयंसेवक
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          Contact
+          संपर्क
         </div>
       </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -83,17 +83,17 @@ function Resources() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 
       <div className="resources1">
         <h1 className="resources-text">
-          Resources
+        संसाधन
         </h1>
       </div>
       <div className="resources-content">
-        <p>For resources refer to these articles:</p>
+        <p>संसाधनों के लिए ये लेख देखें:</p>
         <div className="resources-links">
           <a href='https://www.youtube.com/watch?v=nZEP_j3-0Mo'>https://www.youtube.com/watch?v=nZEP_j3-0Mo
           </a>

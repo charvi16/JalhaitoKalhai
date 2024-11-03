@@ -45,35 +45,35 @@ function Landingpage() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          About
+          बारे में
         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          What We Do
+          हम क्या करते हैं
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          Resources
+          संसाधन
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          Volunteer
+          स्वयंसेवक
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          Contact
+          संपर्क
         </div>
       </div>
         <div className="dropdown">
@@ -81,21 +81,15 @@ function Landingpage() {
             Menu
           </button>
           <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
+          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
           </div>
         </div>
     </div>
@@ -108,8 +102,8 @@ function Landingpage() {
         </div>
 
         <div className="partnership">
-          <div className="partnership-content">In Partnership</div>
-          <div className="partnership-content">with</div>
+          <div className="partnership-content">साझेदारी में</div>
+          <div className="partnership-content">साथ</div>
           <div className="partnership-div">
           <a href="https://spsjharkhand.org/" target="_blank" rel="noopener noreferrer">
               <img src={partner2} alt="partner2" />

@@ -30,39 +30,39 @@ function Contact() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          About
+          बारे में
         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          What We Do
+          हम क्या करते हैं
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          Resources
+          संसाधन
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          Volunteer
+          स्वयंसेवक
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          Contact
+          संपर्क
         </div>
       </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -83,18 +83,18 @@ function Contact() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 
       <div className="contact1">
         <h1 className="contact-text">
-          Contact Us
+        हमसे संपर्क करें
         </h1>
       </div>
       <div className="contact-content">
         <div className="contact-1">
-          Kindly Mail us for any suggestions or questions at:
+        कृपया किसी भी सुझाव या प्रश्न के लिए हमें मेल करें
         </div>
         <div className="email">
           <br/>

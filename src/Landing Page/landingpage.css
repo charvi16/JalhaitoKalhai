@@ -56,80 +56,9 @@
     display: none;
 }
 
-.dropdown {
-    display: none;
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10000000;
-}
-
-.dropdown-content p {
-    color: teal;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-.dropdown-content p:hover {
-    background-color: #ddd;
-}
-
-.show {
-    display: block;
-}
-
-.dropdown-toggle {
-    background-color: teal;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-toggle:focus {
-    outline: none;
-}
-
 @media screen and (max-width: 800px) {
     .header{
         position: relative;
-    }
-
-    .header-item {
-        display: none;
-        z-index: -1;
-    }
-
-    .header-options .header-item{
-        display: none;
-    }
-
-
-    .dropdown {
-        /* overflow-y: scroll; */
-        display: block;
-    }
-
-    .dropdown-content {
-        display: block;
-        background-color: white;
-        min-width: 200px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1000; 
-        top: 100%; 
-    } 
-
-    .show {
-         display: block; 
     }
     
     .content{
@@ -166,6 +95,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    z-index: -1;
 }
 
 .content-img::after {
@@ -239,9 +169,43 @@
 }
 
 @media screen and (max-width: 800px) {
+
+
+
+    .header-options .header-item{
+        display: none;
+    }
     .content{
         z-index: -1;
     }
+
+    .dropdown{
+        overflow-y: visible;
+    }
+
+    .dropdown-content {
+        overflow-y: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 20; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1000;
+    
+        &.show {
+          display: block;
+        }
+      }
+    
+      .dropdown-content p {
+        padding: 10px 20px;
+        color: teal;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
     .content-img{
         height: 60vh;
