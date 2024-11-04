@@ -30,71 +30,65 @@ function Contact() {
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
-          बारे में
-        </div>
+          About
+         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
           onClick={() => handleSelect('what')}
         >
-          हम क्या करते हैं
+          What We Do
         </div>
 
         <div
           className={`header-item ${selected === 'resources' ? 'active' : ''}`}
           onClick={() => handleSelect('resources')}
         >
-          संसाधन
+          Resources
         </div>
 
         <div
           className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
           onClick={() => handleSelect('volunteer')}
         >
-          स्वयंसेवक
+          Volunteer
         </div>
 
         <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
-          संपर्क
+          Contact
         </div>
       </div>
 
-        {/* <div className="dropdown">
+      <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
           <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
+          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
           </div>
-        </div> */}
+        </div>
 
       </div>
 
       <div className="contact1">
         <h1 className="contact-text">
-        हमसे संपर्क करें
+        Contact Us
         </h1>
       </div>
       <div className="contact-content">
         <div className="contact-1">
-        कृपया किसी भी सुझाव या प्रश्न के लिए हमें मेल करें
+        Kindly Mail us for any suggestions or questions at:
         </div>
         <div className="email">
           <br/>
