@@ -59,6 +59,13 @@ function Volunteer() {
         </div>
 
         <div
+          className={`header-item ${selected === 'study' ? 'active' : ''}`}
+          onClick={() => handleSelect('study')}
+        >
+          Study Group
+        </div>
+
+        <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
@@ -66,7 +73,7 @@ function Volunteer() {
         </div>
       </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -87,7 +94,7 @@ function Volunteer() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 

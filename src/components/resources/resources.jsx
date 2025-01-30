@@ -55,6 +55,13 @@ function Resources() {
         </div>
 
         <div
+          className={`header-item ${selected === 'study' ? 'active' : ''}`}
+          onClick={() => handleSelect('study')}
+        >
+          Study Group
+        </div>
+
+        <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
@@ -62,7 +69,7 @@ function Resources() {
         </div>
       </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -83,7 +90,7 @@ function Resources() {
               </>
             )}
           </div>
-        </div>
+        </div> */}
 
       </div>
 

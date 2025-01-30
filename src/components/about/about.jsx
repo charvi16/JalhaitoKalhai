@@ -56,6 +56,13 @@ function About() {
         </div>
 
         <div
+          className={`header-item ${selected === 'study' ? 'active' : ''}`}
+          onClick={() => handleSelect('study')}
+        >
+          Study Group
+        </div>
+
+        <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
@@ -63,28 +70,7 @@ function About() {
         </div>
       </div>
 
-        <div className="dropdown">
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
-          </div>
-        </div>
+        {/*  */}
       </div>
 
       <div className="about1">
@@ -101,7 +87,7 @@ function About() {
         </p>
         <p className='text-2'>
           In an effort to support the UN's global sustainability goals, two
-          Grade 8 students, Dimple Kumari and Simple Kumari, from KGBV School in Giridih,
+          Grade 8 students, Bharti Kumari and Simpal Kumari, from KGBV School in Giridih,
           Jharkhand, took the initiative to prepare this project for the National Students Innovative
           Challenge, a nationwide school challenge/contest run by e-vidyaloka (website: 
           <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>).

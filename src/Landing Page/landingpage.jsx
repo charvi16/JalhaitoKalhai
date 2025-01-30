@@ -11,6 +11,7 @@ import About from '../components/about/about';
 import Contact from '../components/contact/contact';
 import Resources from '../components/resources/resources';
 import Volunteer from '../components/Volunteer/volunteer';
+import Study from '../components/study/study';
 import What from '../components/what/what';
 
 function Landingpage() {
@@ -70,6 +71,13 @@ function Landingpage() {
         </div>
 
         <div
+          className={`header-item ${selected === 'study' ? 'active' : ''}`}
+          onClick={() => handleSelect('study')}
+        >
+          Study Group
+        </div>
+
+        <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
@@ -81,21 +89,15 @@ function Landingpage() {
             Menu
           </button>
           <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
+          {['about', 'what', 'resources', 'volunteer', 'study', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
           </div>
         </div>
     </div>
@@ -103,8 +105,8 @@ function Landingpage() {
 
       <div className="content">
         <div className="content-img" style={{ backgroundImage: `url(${image})` }}>
-          <h1 className="centered-text">Jal hai to Kal hai</h1>
-          <h3 className="centered-text-2">जल है तो कल है</h3>
+          <h1 className="centered-text">Jal hi Jeevan hai</h1>
+          <h3 className="centered-text-2">जल ही जीवन है</h3>
         </div>
 
         <div className="partnership">
@@ -138,6 +140,8 @@ function Landingpage() {
               <Resources />
             ) : selected === 'volunteer' ? (
               <Volunteer />
+            ) : selected === 'study' ? (
+              <Study/>
             ) : selected === 'contact' ? (
               <Contact/>) : null}
       </div>

@@ -7,7 +7,7 @@ import logo from '../logo.jpg';
 function What() {
 
   const navigate = useNavigate();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
@@ -15,13 +15,13 @@ function What() {
   const handleSelect = (section) => {
     setSelected(section);
     navigate(`/${section === 'landing page' ? '' : section}`);
-    setDropdownOpen(false);
+    // setDropdownOpen(false);
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen((prev) => !prev);
-    console.log("Dropdown open:", !dropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setDropdownOpen((prev) => !prev);
+  //   console.log("Dropdown open:", !dropdownOpen);
+  // };
 
   
   return (
@@ -62,6 +62,13 @@ function What() {
         </div>
 
         <div
+          className={`header-item ${selected === 'study' ? 'active' : ''}`}
+          onClick={() => handleSelect('study')}
+        >
+          Study Group
+        </div>
+
+        <div
           className={`header-item ${selected === 'contact' ? 'active' : ''}`}
           onClick={() => handleSelect('contact')}
         >
@@ -69,47 +76,6 @@ function What() {
         </div>
       </div>
 
-      <div className="dropdown">
-  <button className="dropdown-toggle" onClick={toggleDropdown}>
-    Menu
-  </button>
-  <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-    <div
-      className={`header-item ${selected === 'about' ? 'active' : ''}`}
-      onClick={() => handleSelect('about')}
-    >
-      About
-    </div>
-
-    <div
-      className={`header-item ${selected === 'what' ? 'active' : ''}`}
-      onClick={() => handleSelect('what')}
-    >
-      What We Do
-    </div>
-
-    <div
-      className={`header-item ${selected === 'resources' ? 'active' : ''}`}
-      onClick={() => handleSelect('resources')}
-    >
-      Resources
-    </div>
-
-    <div
-      className={`header-item ${selected === 'volunteer' ? 'active' : ''}`}
-      onClick={() => handleSelect('volunteer')}
-    >
-      Volunteer
-    </div>
-
-    <div
-      className={`header-item ${selected === 'contact' ? 'active' : ''}`}
-      onClick={() => handleSelect('contact')}
-    >
-      Contact
-    </div>
-  </div>
-</div>
 
       </div>
       <div 
