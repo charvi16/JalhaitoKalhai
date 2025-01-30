@@ -14,7 +14,7 @@
     align-items: center;
     padding: 0 10vw;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     z-index: 10;
 }
 
@@ -190,7 +190,10 @@
         left: 0;
         width: 100%;
         background-color: white;
+<<<<<<< HEAD
         z-index: 20; 
+=======
+>>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         display: none;
         z-index: 1000;

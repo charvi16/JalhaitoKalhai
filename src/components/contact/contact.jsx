@@ -31,7 +31,7 @@ function Contact() {
           onClick={() => handleSelect('about')}
         >
           About
-        </div>
+         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
@@ -69,26 +69,24 @@ function Contact() {
         </div>
       </div>
 
+<<<<<<< HEAD
         {/* <div className="dropdown">
+=======
+      <div className="dropdown">
+>>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
           <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-            {loading ? (
-              <div className="white-text">Loading, please wait...</div>
-            ) : (
-              <>
-                {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                  <p
-                    key={item}
-                    className={selected === item ? 'active' : ''}
-                    onClick={() => handleSelect(item)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </p>
-                ))}
-              </>
-            )}
+          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
           </div>
         </div> */}
 
@@ -96,12 +94,12 @@ function Contact() {
 
       <div className="contact1">
         <h1 className="contact-text">
-          Contact Us
+        Contact Us
         </h1>
       </div>
       <div className="contact-content">
         <div className="contact-1">
-          Kindly Mail us for any suggestions or questions at:
+        Kindly Mail us for any suggestions or questions at:
         </div>
         <div className="email">
           <br/>

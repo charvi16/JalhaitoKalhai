@@ -33,12 +33,12 @@ function What() {
         </div>
 
       <div className="header-options">
-        <div
+      <div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
           About
-        </div>
+         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
@@ -73,6 +73,23 @@ function What() {
           onClick={() => handleSelect('contact')}
         >
           Contact
+        </div>
+
+        <div className="dropdown">
+          <button className="dropdown-toggle" onClick={toggleDropdown}>
+            Menu
+          </button>
+          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
+          </div>
         </div>
       </div>
 

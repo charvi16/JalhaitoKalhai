@@ -11,14 +11,19 @@ function About() {
 
   const handleSelect = (section) => {
     setSelected(section);
-    navigate(`/${section === 'landingpage' ? '' : section}`);
     setDropdownOpen(false);
+    
+    // Use a timeout to allow state updates before navigating
+    setTimeout(() => {
+      navigate(`/${section === 'landingpage' ? '' : section}`);
+    }, 0);
   };
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
 
+  
   return (
     <div className="about-container">
       <div className="header">
@@ -27,12 +32,12 @@ function About() {
         </div>
 
 <div className="header-options">
-        <div
+<div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
           About
-        </div>
+         </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
@@ -70,7 +75,26 @@ function About() {
         </div>
       </div>
 
+<<<<<<< HEAD
         {/*  */}
+=======
+      <div className="dropdown">
+          <button className="dropdown-toggle" onClick={toggleDropdown}>
+            Menu
+          </button>
+          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
+    <p
+      key={item}
+      className={selected === item ? 'active' : ''}
+      onClick={() => handleSelect(item)}
+    >
+      {item.charAt(0).toUpperCase() + item.slice(1)}
+    </p>
+  ))}
+          </div>
+        </div>
+>>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
       </div>
 
       <div className="about1">
@@ -93,7 +117,7 @@ function About() {
           <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>).
         </p>
         <p className='text-3'>
-          This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later.
+        This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later.
         </p>
       </div>
     </div>
