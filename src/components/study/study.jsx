@@ -81,22 +81,13 @@ function Study() {
         <p className='content-tagline'>Jal hi</p>
         <p className='content-tagline'>Jeevan hai</p>
         <p className='text-1'>
-            Text TBD
-          {/* The purpose of this website is to increase awareness amongst people about the need to
-          reduce water wastage, which is one of the sustainability challenges related to the
-          current water crisis. */}
+        Jal Rakshak or Water Protectors is a study group formed for those who would like to be a part of the water research study group. This initiative is based on recent research performed by our team members from Bangalore- Saanvi, and Anagha, who have dedicated their time to know the cause behind the inadequate water supply and sanitation facilities due to rapid urbanization in India.
         </p>
         <p className='text-2'>
-            Text TBD
-          {/* In an effort to support the UN's global sustainability goals, two
-          Grade 8 students, Bharti Kumari and Simpal Kumari, from KGBV School in Giridih,
-          Jharkhand, took the initiative to prepare this project for the National Students Innovative
-          Challenge, a nationwide school challenge/contest run by e-vidyaloka (website: 
-          <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>). */}
+          This research group is also joined by our members from Jharkhand- Bharti and Simple, trying to brainstorm together on solving the water crisis in both urban and rural areas through their rain water harvesting solution. And now, we have Saanvi Vijay Kumar and Anagha Kumble from BGS National Public School, Banglare , have also signed up for this challenge
         </p>
         <p className='text-3'>
-            Text TBD
-          {/* This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later. */}
+          Come be a part of this study group and share or brainstorm your innovative solutions
         </p>
       </div>
     </div>
