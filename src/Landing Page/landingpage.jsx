@@ -92,7 +92,7 @@ function Landingpage() {
           Contact
         </div>
       </div>
-<<<<<<< HEAD
+
         <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
@@ -107,26 +107,9 @@ function Landingpage() {
       {item.charAt(0).toUpperCase() + item.slice(1)}
     </p>
   ))}
-=======
-          <div className="dropdown">
-            <button className="dropdown-toggle" onClick={toggleDropdown}>
-              Menu
-            </button>
-            <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-                <p
-                  key={item}
-                  className={selected === item ? 'active' : ''}
-                  onClick={() => handleSelect(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </p>
-              ))}
-            </div>
->>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
           </div>
         </div>
-      </div>
+        </div>
 
       <div className="content">
         <div className="content-img" style={{ backgroundImage: `url(${image})` }}>
@@ -152,7 +135,6 @@ function Landingpage() {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
         {/* <Home/> */}
         <div className="content-display"> 
         {loading ? (
@@ -169,24 +151,9 @@ function Landingpage() {
               <Study/>
             ) : selected === 'contact' ? (
               <Contact/>) : null}
-=======
-        
-        <div className="content-display">
-          {loading ? (
-            <div className='white-text'>Loading please wait...</div>
-          ) : selected === 'about' ? (
-            <About />
-          ) : selected === 'what' ? (
-            <What />
-          ) : selected === 'resources' ? (
-            <Resources />
-          ) : selected === 'volunteer' ? (
-            <Volunteer />
-          ) : selected === 'contact' ? (
-            <Contact />
-          ) : null}
-        </div>
->>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
+      </div>
+      
+      </div>
       </div>
     </div>
   );

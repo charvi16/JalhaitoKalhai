@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './study.css';
+import './about.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../logo.jpg';
 
