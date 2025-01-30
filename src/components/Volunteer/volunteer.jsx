@@ -73,10 +73,6 @@ function Volunteer() {
         {/*  */}
       </div>
 
-      <div className="about1">
-        <h1 className="about-text">Volunteer</h1>
-      </div>
-
       <div 
           className="volunteer1"
         >
