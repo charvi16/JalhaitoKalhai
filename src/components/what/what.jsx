@@ -7,7 +7,6 @@ import logo from '../logo.jpg';
 function What() {
 
   const navigate = useNavigate();
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
 
@@ -15,14 +14,7 @@ function What() {
   const handleSelect = (section) => {
     setSelected(section);
     navigate(`/${section === 'landing page' ? '' : section}`);
-    // setDropdownOpen(false);
   };
-
-  // const toggleDropdown = () => {
-  //   setDropdownOpen((prev) => !prev);
-  //   console.log("Dropdown open:", !dropdownOpen);
-  // };
-
   
   return (
     <div className="action-container">
