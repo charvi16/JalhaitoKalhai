@@ -1,7 +1,6 @@
-import React from 'react';
-import './volunteer.css';
+import React, { useState, useEffect } from 'react';
+import './study.css';
 import { useNavigate } from 'react-router-dom';
-import { useState,useEffect } from 'react';
 import logo from '../logo.jpg';
 
 function Volunteer() {
@@ -9,7 +8,6 @@ function Volunteer() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState('');
-
 
   const handleSelect = (section) => {
     setSelected(section);
@@ -21,21 +19,20 @@ function Volunteer() {
     setDropdownOpen((prev) => !prev);
   };
 
-
   return (
-    <div className="volunteer-container">
+    <div className="about-container">
       <div className="header">
         <div className="logo">
-        <img src={logo} alt="logo" onClick={() => navigate('/')} />
-
+          <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
-        <div className="header-options">
+
+<div className="header-options">
         <div
           className={`header-item ${selected === 'about' ? 'active' : ''}`}
           onClick={() => handleSelect('about')}
         >
           About
-         </div>
+        </div>
 
         <div
           className={`header-item ${selected === 'what' ? 'active' : ''}`}
@@ -71,30 +68,13 @@ function Volunteer() {
         >
           Contact
         </div>
-
       </div>
 
-<<<<<<< HEAD
-        {/* <div className="dropdown">
-=======
-      <div className="dropdown">
->>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-    <p
-      key={item}
-      className={selected === item ? 'active' : ''}
-      onClick={() => handleSelect(item)}
-    >
-      {item.charAt(0).toUpperCase() + item.slice(1)}
-    </p>
-  ))}
-          </div>
-        </div> */}
+        {/*  */}
+      </div>
 
+      <div className="about1">
+        <h1 className="about-text">Volunteer</h1>
       </div>
 
       <div 
@@ -117,7 +97,6 @@ function Volunteer() {
         school-level competition, as a continuing effort event. 
         </p>
       </div>
-
     </div>
   );
 }
