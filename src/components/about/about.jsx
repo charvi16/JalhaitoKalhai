@@ -91,6 +91,7 @@ function About() {
           Jharkhand, took the initiative to prepare this project for the National Students Innovative
           Challenge, a nationwide school challenge/contest run by e-vidyaloka (website: 
           <a href="https://www.evidyaloka.org/national-student-innovation-challenge" target="_blank" rel="noopener noreferrer"> e-vidyaloka</a>).
+          And now, we have Saanvi Vijay Kumar and Anagha Kumble, from BGS National Public School in Banglare, have also signed up for this challenge.
         </p>
         <p className='text-3'>
           This project will help us serve the community at large by sharing knowledge about different ways to effectively and efficiently utilize water resources, one such is rainwater harvesting or by creating small water storages where we can store precious rainwater to be utilized later.

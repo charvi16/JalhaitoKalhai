@@ -84,7 +84,7 @@ function Study() {
         Jal Rakshak or Water Protectors is a study group formed for those who would like to be a part of the water research study group. This initiative is based on recent research performed by our team members from Bangalore- Saanvi, and Anagha, who have dedicated their time to know the cause behind the inadequate water supply and sanitation facilities due to rapid urbanization in India.
         </p>
         <p className='text-2'>
-          This research group is also joined by our members from Jharkhand- Bharti and Simple, trying to brainstorm together on solving the water crisis in both urban and rural areas through their rain water harvesting solution. And now, we have Saanvi Vijay Kumar and Anagha Kumble from BGS National Public School, Banglare , have also signed up for this challenge
+          This research group is also joined by our members from Jharkhand- Bharti and Simple, trying to brainstorm together on solving the water crisis in both urban and rural areas through their rain water harvesting solution. 
         </p>
         <p className='text-3'>
           Come be a part of this study group and share or brainstorm your innovative solutions
