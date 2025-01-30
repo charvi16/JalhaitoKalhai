@@ -69,27 +69,6 @@ function Contact() {
         </div>
       </div>
 
-<<<<<<< HEAD
-        {/* <div className="dropdown">
-=======
-      <div className="dropdown">
->>>>>>> 7cf0653db9d60f1445c73bfa93b5ea7b38298ae6
-          <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-          {['about', 'what', 'resources', 'volunteer', 'contact'].map((item) => (
-    <p
-      key={item}
-      className={selected === item ? 'active' : ''}
-      onClick={() => handleSelect(item)}
-    >
-      {item.charAt(0).toUpperCase() + item.slice(1)}
-    </p>
-  ))}
-          </div>
-        </div> */}
-
       </div>
 
       <div className="contact1">
