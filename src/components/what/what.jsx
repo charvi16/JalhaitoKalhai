@@ -67,7 +67,7 @@ function What() {
           Contact
         </div>
 
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
             Menu
           </button>
@@ -82,7 +82,7 @@ function What() {
     </p>
   ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
 
